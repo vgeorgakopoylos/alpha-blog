@@ -48,7 +48,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :test do
+group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.6'
   # Adds support for Capybara system testing and selenium driver
@@ -59,7 +59,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 1.1.3'
+  gem 'pg'
   gem 'rails_12factor'
 end
 
