@@ -6,20 +6,26 @@
   <% end %>
 </ul>
 <% end %>
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
 
-<p>
-  <%= link_to "Back to Articles list", articles_path %>
-</p>
+<%= form_for @article do |f| %>
+  <div class="form-group row">
+    <%= f.label :title, class: "col-sm-2 col-form-label" %><br/>
+    <div class="col-sm-8">
+      <%= f.text_field :title, class: "form-control", placeholder: "Title of artcile" %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <%= f.label :description, class: "col-sm-2 col-form-label" %><br/>
+    <div class="col-sm-8">
+      <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of artcile" %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-sm-2 col-sm-2">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+<div class="col-sm-4 offset-sm-4">
+  [<%= link_to "Cancel request and return to Articles list", articles_path %>]
+</div>
