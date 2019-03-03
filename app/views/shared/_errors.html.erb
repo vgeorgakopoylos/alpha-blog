@@ -1,0 +1,19 @@
+<% if obj.errors.any? %>
+  <div class="form-group row">
+    <div class="col-sm-8 offset-sm-2">
+      <div class="card border-danger mb-3">
+        <div class="card-header bg-danger font-weight-bold">
+          <%= pluralize(obj.errors.count, "error") %>
+          prohibited this obj from being saved:
+        </div>
+        <div class="card-body text-danger">
+          <ul>
+            <% obj.errors.full_messages.each do |msg| %>
+              <%= content_tag :li, msg, class: "card-title" %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
