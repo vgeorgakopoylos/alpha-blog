@@ -1,3 +1,8 @@
 <h1 align="center">List of all Articles</h1>
-
+<div class="row justify-content-center">
+  <%= will_paginate %>
+</div>
 <%= render 'article', obj: @articles %>
+<div class="row justify-content-center bottom_pagination">
+  <%= will_paginate %>
+</div>
