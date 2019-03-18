@@ -1,4 +1,7 @@
 <h1 align="center">Listing All Categories</h1>
+<div class="row justify-content-center">
+  <%= will_paginate %>
+</div>
 <% @categories.each do |category| %>
   <ul class="listing">
     <div class="form-group row">
@@ -12,3 +15,6 @@
     </div>
   </ul>
 <% end %>
+<div class="row justify-content-center">
+  <%= will_paginate %>
+</div>
