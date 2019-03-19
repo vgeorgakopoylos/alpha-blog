@@ -16,7 +16,7 @@
           <% if article.categories.any? %>
             <div class="article-meta-details">
               <p>Categories: <%= render article.categories%></p>
-            </div>  
+            </div>
           <% end %>
         </div>
         <% if logged_in? && (current_user == article.user || current_user.admin?) %>
